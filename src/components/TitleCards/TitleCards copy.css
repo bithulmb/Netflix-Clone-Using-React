@@ -1,0 +1,100 @@
+/* .title-cards{
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.title-cards h2{
+    margin-bottom: 8px;
+}
+
+.card-list {
+    display: flex;    
+    gap: 10px;
+    overflow-x:scroll;
+}
+
+.card-list::-webkit-scrollbar{
+    display: none;
+}
+
+.card-list .card img{
+    width: 240px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.card-list .card{
+    position: relative;
+}
+
+.card-list .card p{
+    font-size: 80%;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: white;
+    text-shadow: 0 1px black;
+    background: rgba(0, 0, 0, 8);
+} */
+
+.title-cards {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.title-cards h2 {
+    margin-bottom: 12px;
+    padding-left: 10px;
+    font-size: 1.2rem;
+}
+
+.card-list {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-behavior: smooth; /* Smooth scrolling */
+    -ms-overflow-style: none; /* For IE and Edge */
+    padding-bottom: 10px; /* Add padding to prevent clipping */
+}
+
+.card-list::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+}
+
+.card-list .card {
+    position: relative;
+    flex-shrink: 0; /* Prevent shrinking */
+    width: 200px; /* Set card width */
+    max-width: 100%; /* Prevent overflow */
+}
+
+.card-list .card img {
+    width: 100%; /* Ensure image fits the card */
+    border-radius: 6px;
+    cursor: pointer;
+    object-fit: cover; /* Ensure proper image scaling */
+}
+
+.card-list .card p {
+    font-size: 80%;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    text-shadow: 0 1px black;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .card-list .card {
+        width: 150px; /* Adjust card size for smaller screens */
+        height: 220px; /* Adjust height */
+    }
+
+    .title-cards h2 {
+        font-size: 1rem;
+    }
+}

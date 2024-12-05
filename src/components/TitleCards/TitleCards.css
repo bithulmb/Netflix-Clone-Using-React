@@ -1,0 +1,63 @@
+.title-cards{
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.title-cards h2{
+    margin-bottom: 8px;
+}
+
+/* .card-list {
+    display: flex;    
+    gap: 10px;
+    overflow-x:scroll;
+} */
+
+.card-list {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto; 
+    scroll-behavior: smooth; 
+    -ms-overflow-style: none; 
+    padding-bottom: 10px; 
+}
+
+.card-list::-webkit-scrollbar{
+    display: none;
+}
+
+.card-list .card {
+    position: relative;
+    flex-shrink: 0; /* Prevent shrinking */
+    width: 200px; /* Set card width */
+    max-width: 100%; /* Prevent overflow */
+}
+
+.card-list .card img {
+    width: 100%; /* Ensure image fits the card */
+    border-radius: 6px;
+    cursor: pointer;
+    object-fit: cover; /* Ensure proper image scaling */
+}
+
+/* .card-list .card img{
+    width: 240px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.card-list .card{
+    position: relative;
+    width: 200px;
+} */
+
+.card-list .card p{
+    font-size: 80%;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    /* color: white;
+    text-shadow: 0 1px black;
+    background: rgba(0, 0, 0, 8); */
+}
+
